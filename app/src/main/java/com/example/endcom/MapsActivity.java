@@ -71,7 +71,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
             }
         });
-
     }
      //metodo para insertar e marcador dependiento la latitus y longitud
     private void insertarMarcador() {
@@ -84,6 +83,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(estacion));
             }
              }
+        Toast.makeText(getApplicationContext(),
+                " Se muestran  las ubicaciones con bicis disponibles ", Toast.LENGTH_LONG).show();
 
 
     }
