@@ -77,7 +77,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for(Station station : apiCityBik.getNetwork().getStations()){
 
-            if(station.getEmptySlots() < station.getFreeBikes()) { //condicion para bicis disponobles
+            if(station.getFreeBikes() > 0) { //condicion para bicis disponobles
                 LatLng estacion = new LatLng(station.getLatitude(), station.getLongitude()); //
                 mMap.addMarker(new MarkerOptions().position(estacion).title(station.getName()  + "/ Bicis disponibles:" + station.getFreeBikes().toString()));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(estacion));
